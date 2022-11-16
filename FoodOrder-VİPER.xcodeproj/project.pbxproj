@@ -13,6 +13,16 @@
 		9E0045D9291FDE0200009FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0045D7291FDE0200009FDA /* Main.storyboard */; };
 		9E0045DB291FDE0300009FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0045DA291FDE0300009FDA /* Assets.xcassets */; };
 		9E0045DE291FDE0300009FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0045DC291FDE0300009FDA /* LaunchScreen.storyboard */; };
+		9E0045ED291FDE6000009FDA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0045EC291FDE6000009FDA /* LoginVC.swift */; };
+		9E0045F0291FDE8800009FDA /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0045EF291FDE8800009FDA /* LoginProtocol.swift */; };
+		9E07426A291FF508001D2D85 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9E074269291FF508001D2D85 /* FirebaseAuth */; };
+		9E07426C291FF508001D2D85 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9E07426B291FF508001D2D85 /* FirebaseDatabase */; };
+		9E07426E291FF508001D2D85 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E07426D291FF508001D2D85 /* FirebaseFirestore */; };
+		9E074270291FF508001D2D85 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9E07426F291FF508001D2D85 /* FirebaseStorage */; };
+		9E074273291FF53B001D2D85 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9E074272291FF53B001D2D85 /* Alamofire */; };
+		9E074276291FF59E001D2D85 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9E074275291FF59E001D2D85 /* Kingfisher */; };
+		9E50264329215AC500FF16A7 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50264229215AC500FF16A7 /* LoginRouter.swift */; };
+		9E50264529215BFC00FF16A7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50264429215BFC00FF16A7 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,10 @@
 		9E0045DA291FDE0300009FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E0045DD291FDE0300009FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E0045DF291FDE0300009FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E0045EC291FDE6000009FDA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9E0045EF291FDE8800009FDA /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		9E50264229215AC500FF16A7 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		9E50264429215BFC00FF16A7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E074276291FF59E001D2D85 /* Kingfisher in Frameworks */,
+				9E074273291FF53B001D2D85 /* Alamofire in Frameworks */,
+				9E07426C291FF508001D2D85 /* FirebaseDatabase in Frameworks */,
+				9E074270291FF508001D2D85 /* FirebaseStorage in Frameworks */,
+				9E07426A291FF508001D2D85 /* FirebaseAuth in Frameworks */,
+				9E07426E291FF508001D2D85 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +76,83 @@
 		9E0045D0291FDE0200009FDA /* FoodOrder-VİPER */ = {
 			isa = PBXGroup;
 			children = (
-				9E0045D1291FDE0200009FDA /* AppDelegate.swift */,
-				9E0045D3291FDE0200009FDA /* SceneDelegate.swift */,
+				9E0045E6291FDE2900009FDA /* Login */,
+				9E0045E5291FDE1B00009FDA /* Support */,
 				9E0045D5291FDE0200009FDA /* ViewController.swift */,
 				9E0045D7291FDE0200009FDA /* Main.storyboard */,
-				9E0045DA291FDE0300009FDA /* Assets.xcassets */,
 				9E0045DC291FDE0300009FDA /* LaunchScreen.storyboard */,
 				9E0045DF291FDE0300009FDA /* Info.plist */,
 			);
 			path = "FoodOrder-VİPER";
+			sourceTree = "<group>";
+		};
+		9E0045E5291FDE1B00009FDA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9E0045D1291FDE0200009FDA /* AppDelegate.swift */,
+				9E0045D3291FDE0200009FDA /* SceneDelegate.swift */,
+				9E0045DA291FDE0300009FDA /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9E0045E6291FDE2900009FDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9E0045EE291FDE6B00009FDA /* protocols */,
+				9E0045EB291FDE5300009FDA /* router */,
+				9E0045EA291FDE4E00009FDA /* entity */,
+				9E0045E9291FDE4500009FDA /* interactor */,
+				9E0045E8291FDE3F00009FDA /* presenter */,
+				9E0045E7291FDE3900009FDA /* view */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9E0045E7291FDE3900009FDA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9E0045EC291FDE6000009FDA /* LoginVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9E0045E8291FDE3F00009FDA /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9E50264429215BFC00FF16A7 /* LoginPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		9E0045E9291FDE4500009FDA /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		9E0045EA291FDE4E00009FDA /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		9E0045EB291FDE5300009FDA /* router */ = {
+			isa = PBXGroup;
+			children = (
+				9E50264229215AC500FF16A7 /* LoginRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		9E0045EE291FDE6B00009FDA /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9E0045EF291FDE8800009FDA /* LoginProtocol.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +171,14 @@
 			dependencies = (
 			);
 			name = "FoodOrder-VİPER";
+			packageProductDependencies = (
+				9E074269291FF508001D2D85 /* FirebaseAuth */,
+				9E07426B291FF508001D2D85 /* FirebaseDatabase */,
+				9E07426D291FF508001D2D85 /* FirebaseFirestore */,
+				9E07426F291FF508001D2D85 /* FirebaseStorage */,
+				9E074272291FF53B001D2D85 /* Alamofire */,
+				9E074275291FF59E001D2D85 /* Kingfisher */,
+			);
 			productName = "FoodOrder-VİPER";
 			productReference = 9E0045CE291FDE0200009FDA /* FoodOrder-VİPER.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +207,11 @@
 				Base,
 			);
 			mainGroup = 9E0045C5291FDE0200009FDA;
+			packageReferences = (
+				9E074268291FF508001D2D85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9E074271291FF53B001D2D85 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9E074274291FF59E001D2D85 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9E0045CF291FDE0200009FDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0045D6291FDE0200009FDA /* ViewController.swift in Sources */,
+				9E0045F0291FDE8800009FDA /* LoginProtocol.swift in Sources */,
+				9E50264529215BFC00FF16A7 /* LoginPresenter.swift in Sources */,
+				9E50264329215AC500FF16A7 /* LoginRouter.swift in Sources */,
 				9E0045D2291FDE0200009FDA /* AppDelegate.swift in Sources */,
+				9E0045ED291FDE6000009FDA /* LoginVC.swift in Sources */,
 				9E0045D4291FDE0200009FDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +463,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E074268291FF508001D2D85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		9E074271291FF53B001D2D85 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		9E074274291FF59E001D2D85 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E074269291FF508001D2D85 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E074268291FF508001D2D85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9E07426B291FF508001D2D85 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E074268291FF508001D2D85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9E07426D291FF508001D2D85 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E074268291FF508001D2D85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9E07426F291FF508001D2D85 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E074268291FF508001D2D85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		9E074272291FF53B001D2D85 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E074271291FF53B001D2D85 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9E074275291FF59E001D2D85 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E074274291FF59E001D2D85 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E0045C6291FDE0200009FDA /* Project object */;
 }
